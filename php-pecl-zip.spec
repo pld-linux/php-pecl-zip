@@ -7,9 +7,9 @@ Version:	1.0
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_modname}-%{version}.tgz
+Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	255203b19e46c0512e6ab3780ba2d2e5
-URL:		http://pear.php.net/package/zip/
+URL:		http://pecl.php.net/package/zip/
 BuildRequires:	libtool
 BuildRequires:	php-devel
 BuildRequires:	zziplib-devel

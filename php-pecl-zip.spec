@@ -12,6 +12,7 @@ Source0:	http://pear.php.net/get/%{_modname}-%{version}.tgz
 URL:		http://pear.php.net/
 BuildRequires:	libtool
 BuildRequires:	php-devel
+BuildRequires:	zziplib-devel
 Requires:	php-common
 Obsoletes:	php-pear-%{_modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

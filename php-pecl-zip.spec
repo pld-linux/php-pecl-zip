@@ -22,12 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Zip is an extension to read zip files.
 
-This extension has in PEAR status: %{_status}
+This extension has in PEAR status: %{_status}.
 
 %description -l pl
 Zip jest rozszerzeniem umo¿liwiaj±cym odczyt archiwów zip.
 
-To rozszerzenie ma w PEAR status: %{_status}
+To rozszerzenie ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c

@@ -2,15 +2,16 @@
 %define		_status		stable
 %define		_sysconfdir	/etc/php
 %define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
+
 Summary:	%{_modname} - a zip management extension
 Summary(pl):	%{_modname} - zarz±dzanie archiwami zip
 Name:		php-pecl-%{_modname}
-Version:	1.2.3
+Version:	1.3.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	b2e0f2b8f96918ee9468928768551ced
+# Source0-md5:	d78c8d076b8ced344b3950b1e5299411
 URL:		http://pecl.php.net/package/zip/
 BuildRequires:	php-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.254

@@ -1,8 +1,5 @@
 %define		_modname	zip
 %define		_status		stable
-%define		_sysconfdir	/etc/php
-%define		extensionsdir	%(php-config --extension-dir 2>/dev/null)
-
 Summary:	%{_modname} - a zip management extension
 Summary(pl):	%{_modname} - zarz±dzanie archiwami zip
 Name:		php-pecl-%{_modname}
@@ -17,7 +14,7 @@ BuildRequires:	php-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.344
 BuildRequires:	zziplib-devel
 %{?requires_php_extension}
-Requires:	%{_sysconfdir}/conf.d
+Requires:	php-common >= 4:5.0.4
 Provides:	php(zip)
 Obsoletes:	php-pear-%{_modname}
 Obsoletes:	php-zip
@@ -45,10 +42,10 @@ phpize
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sysconfdir}/conf.d,%{extensionsdir}}
+install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
 
-install %{_modname}-%{version}/modules/%{_modname}.so $RPM_BUILD_ROOT%{extensionsdir}
-cat <<'EOF' > $RPM_BUILD_ROOT%{_sysconfdir}/conf.d/%{_modname}.ini
+install %{_modname}-%{version}/modules/%{_modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
 ; Enable %{_modname} extension module
 extension=%{_modname}.so
 EOF
@@ -67,5 +64,5 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc %{_modname}-%{version}/CREDITS
-%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/conf.d/%{_modname}.ini
-%attr(755,root,root) %{extensionsdir}/%{_modname}.so
+%config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{_modname}.ini
+%attr(755,root,root) %{php_extensiondir}/%{_modname}.so

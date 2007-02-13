@@ -1,7 +1,7 @@
 %define		_modname	zip
 %define		_status		stable
 Summary:	%{_modname} - a zip management extension
-Summary(pl.UTF-8):   %{_modname} - zarządzanie archiwami zip
+Summary(pl.UTF-8):	%{_modname} - zarządzanie archiwami zip
 Name:		php-pecl-%{_modname}
 Version:	1.8.3
 Release:	1

@@ -3,12 +3,12 @@
 Summary:	%{_modname} - a zip management extension
 Summary(pl.UTF-8):	%{_modname} - zarządzanie archiwami zip
 Name:		php-pecl-%{_modname}
-Version:	1.9.0
+Version:	1.10.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	045c5c2ee8e657c1ef7ab3a14a79617a
+# Source0-md5:	25edf78cecba940f5abb1d6bed2ade47
 URL:		http://pecl.php.net/package/zip/
 BuildRequires:	php-devel >= 3:5.0.0
 BuildRequires:	rpmbuild(macros) >= 1.344

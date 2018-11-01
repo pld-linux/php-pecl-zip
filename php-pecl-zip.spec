@@ -8,14 +8,13 @@ Version:	1.15.4
 Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+Source0:	https://pecl.php.net/get/%{modname}-%{version}.tgz
 # Source0-md5:	e11a38c022c270fe9c237594f21ec70b
-URL:		http://pecl.php.net/package/zip/
-BuildRequires:	%{php_name}-devel >= 3:5.0.0
+URL:		https://pecl.php.net/package/zip/
+BuildRequires:	%{php_name}-devel >= 3:5.0.4
 BuildRequires:	rpmbuild(macros) >= 1.650
 BuildRequires:	zziplib-devel
 %{?requires_php_extension}
-Requires:	php%{?php_suffix}-common >= 4:5.0.4
 Provides:	php(zip)
 Obsoletes:	php-pear-%{modname}
 Obsoletes:	php-zip
